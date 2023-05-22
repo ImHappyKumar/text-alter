@@ -4,7 +4,9 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useLocation
+  useLocation,
+  useNavigate,
+  useMatch
 } from "react-router-dom";
 import NavBar from './components/NavBar';
 import Alert from './components/Alert';
@@ -17,11 +19,20 @@ import Privacy from './components/Privacy';
 
 // To handle the scroll restoration. It uses the useLocation hook from react-router-dom to listen to changes in the pathname of the URL. Whenever the pathname changes, the useEffect inside ScrollToTop is triggered
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, key } = useLocation();
+  const navigate = useNavigate();
+  const match = useMatch(pathname);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (!match) {
+      // If the current route doesn't match the location pathname,
+      // navigate to the current route to trigger scroll restoration.
+      navigate(pathname);
+    } else {
+      // Quick scroll to top without smooth scrolling
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+  }, [pathname, key, match, navigate]);
 
   return null;
 }
