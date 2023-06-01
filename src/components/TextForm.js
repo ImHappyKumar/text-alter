@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import '../App.css';
 
 export default function TextForm(props) {
   const displayWords = () => {
@@ -26,37 +25,16 @@ export default function TextForm(props) {
   }
 
   const handleUpperCase = () => {
-    let tempText = text;
     let newText = text.toUpperCase();
     setText(newText);
-    if (text.length===0) {
-      props.alert("There is no text to convert to uppercase. Please enter some text.", "warning");
-    }
-    else if (tempText===newText) {
-      props.alert("Text is already in uppercase.", "warning");
-    }
-    else {
-      props.alert("Text successfully converted to uppercase!", "success");
-    }
   }
 
   const handleLowerCase = () => {
-    let tempText = text;
     let newText = text.toLowerCase();
     setText(newText);
-    if (text.length===0) {
-      props.alert("There is no text to convert to lowercase. Please enter some text.", "warning");
-    }
-    else if (tempText===newText) {
-      props.alert("Text is already in lowercase.", "warning");
-    }
-    else {
-      props.alert("Text successfully converted to lowercase!", "success");
-    }
   }
 
   const handleToggleCase = () => {
-    let tempText = text;
     let newText = "";
     for (let i=0; i<text.length; i++) {
       if (text.charAt(i)===text.charAt(i).toLowerCase()) {
@@ -70,19 +48,9 @@ export default function TextForm(props) {
       }
     }
     setText(newText);
-    if (text.length===0) {
-      props.alert("There is no text to toggle its case. Please enter some text.", "warning");
-    }
-    else if (tempText===newText) {
-      props.alert("Text case is already toggled.", "warning");
-    }
-    else {
-      props.alert("Text case successfully toggled!", "success");
-    }
   }
 
   const handleAlternateCase = () => {
-    let tempText = text;
     let newText = "";
     for (let i=0; i<text.length; i++) {
       if (i%2===0) {
@@ -93,19 +61,9 @@ export default function TextForm(props) {
       }
     }
     setText(newText);
-    if (text.length===0) {
-      props.alert("There is no text to alternate its case. Please enter some text.", "warning");
-    }
-    else if (tempText===newText) {
-      props.alert("Text case is already alternated.", "warning");
-    }
-    else {
-      props.alert("Text case successfully alternated!", "success");
-    }
   }
 
   const handleCapitalize = () => {
-    let tempText = text;
     if (text.length!==0) {
       let lines = text.split("\n");
       for (let i = 0; i < lines.length; i++) {
@@ -118,49 +76,19 @@ export default function TextForm(props) {
       }
       let newText = lines.join("\n");
       setText(newText);
-      if (tempText===newText) {
-        props.alert("Text is already capitalized", "warning");
-      }
-      else {
-        props.alert("Text successfully capitalized!", "success");
-      }
-    }
-    
-    else {
-      props.alert("There is no text to capitalized. Please enter some text.", "warning");
-    }
   }
+}
 
   const handleExtraSpaces = () => {
-    let tempText = text;
     let newTextArray = text.split(/[ ]+/);
     let newText = newTextArray.join(" ").trim();
     setText(newText);
-    if (text.length===0) {
-      props.alert("There is no text to remove extra spaces. Please enter some text.", "warning");
-    }
-    else if (tempText===newText) {
-      props.alert("There is no extra space in this text.", "warning");
-    }
-    else {
-      props.alert("Extra spaces have been successfully removed from text!", "success");
-    }
   }
 
   const handleExtraLines = () => {
-    let tempText = text;
     let lines = text.split("\n").filter((e) => {return e.length!==0});
     let newText = lines.join("\n");
     setText(newText);
-    if (text.length===0) {
-      props.alert("There is no text to remove extra lines. Please enter some text.", "warning");
-    }
-    else if (tempText===newText) {
-      props.alert("There is no extra line in this text.", "warning");
-    }
-    else {
-      props.alert("Extra lines have been successfully removed from text!", "success");
-    }
   }
 
   const handleCopyText = () => {
@@ -168,23 +96,11 @@ export default function TextForm(props) {
     copyText.select();
     navigator.clipboard.writeText(copyText.value);
     document.getSelection().removeAllRanges();
-    if (text.length===0) {
-      props.alert("There is no text to copy. Please enter some text.", "warning");
-    }
-    else {
-      props.alert("Text has been copied to the clipboard!", "success");
-    }
   }
 
   const handleClearText = () => {
     let newText = "";
     setText(newText);
-    if (text.length===0) {
-      props.alert("There is no text to clear. Please enter some text.", "warning");
-    }
-    else {
-      props.alert("Text has been cleared!", "success");
-    }
   }
   
   const [text, setText] = useState("");

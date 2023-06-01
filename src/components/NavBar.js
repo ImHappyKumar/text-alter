@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/logo.png';
-import '../App.css';
 
 export default function Navbar(props) {
   const location = useLocation(); // get current location
