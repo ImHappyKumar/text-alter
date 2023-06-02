@@ -145,8 +145,13 @@ export default function TextForm(props) {
         onRequestClose={closeModal}
         contentLabel="Modal"
         ariaHideApp={false}
+        style={{
+          overlay: {
+            backgroundColor: props.mode==='light'?'rgba(255, 255, 255, 0.75)':'rgba(0, 0, 0, 0.75)'
+          }
+        }}
       >
-        <ReplaceModal handleReplace={handleReplace} text={text} />
+        <ReplaceModal handleReplace={handleReplace} text={text} mode={props.mode}/>
       </ReactModal>
     </span>
     <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleCopy}>Copy</button>
