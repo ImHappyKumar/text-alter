@@ -1,6 +1,18 @@
 import React, {useState} from 'react';
+import ReactModal from 'react-modal';
+import ReplaceModal from './ReplaceModal';
 
 export default function TextForm(props) {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
   const displayWords = () => {
     if (text.length===0) {
       return 0;
@@ -91,14 +103,21 @@ export default function TextForm(props) {
     setText(newText);
   }
 
-  const handleCopyText = () => {
+  const handleReplace = (find, replace) => {
+    let tempText = text.split(find);
+    let newText = tempText.join(replace);
+    setText(newText);
+    closeModal();
+  }
+
+  const handleCopy = () => {
     let copyText = document.getElementById("myTextBox");
     copyText.select();
     navigator.clipboard.writeText(copyText.value);
     document.getSelection().removeAllRanges();
   }
 
-  const handleClearText = () => {
+  const handleClear = () => {
     let newText = "";
     setText(newText);
   }
@@ -112,15 +131,26 @@ export default function TextForm(props) {
         <textarea className="form-control shadow-none" style={{backgroundColor: props.mode==='light'?'white':'#343a40', color: props.mode==='light'?'black':'white'}} id="myTextBox" rows="8" placeholder='Type or paste your text' value={text} onChange={handleOnChange}></textarea>
       </div>
     </div>
-    <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleUpperCase}>Convert To Uppercase</button>
-    <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleLowerCase}>Convert To Lowercase</button>
+    <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleUpperCase}>Uppercase</button>
+    <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleLowerCase}>Lowercase</button>
     <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleToggleCase}>Toggle Case</button>
     <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleAlternateCase}>Alternate Case</button>
     <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleCapitalize}>Capitalize</button>
     <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
     <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleExtraLines}>Remove Extra Lines</button>
-    <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleCopyText}>Copy Text</button>
-    <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleClearText}>Clear Text</button>
+    <span>
+      <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={openModal}>Replace</button>
+      <ReactModal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        contentLabel="Modal"
+        ariaHideApp={false}
+      >
+        <ReplaceModal handleReplace={handleReplace} text={text} />
+      </ReactModal>
+    </span>
+    <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleCopy}>Copy</button>
+    <button disabled={text.length===0} className="btn btn-primary mx-2 my-2" onClick={handleClear}>Clear</button>
     <div className="container mt-5" style={{color: props.mode==='light'?'black':'white'}}>
       <h4>Your Text Summary</h4>
       <p><strong>Words Count:</strong> {displayWords()} <br/> <strong>Characters Count:</strong> {text.length} <br/> <strong>Lines Count:</strong> {linesCount()} <br/> <strong>Reading Time:</strong> {(0.008*displayWords()).toFixed(2)} Minutes</p>

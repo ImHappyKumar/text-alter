@@ -70,3 +70,18 @@ pre {
 footer a:hover {
   color: gray !important;
 }
+
+.ReactModal__Content {
+  padding: 25px 15px !important;
+  border: 1.5px solid rgb(204, 204, 204)!important;
+  max-width: 400px;
+  max-height: 210px;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
