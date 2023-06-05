@@ -11,7 +11,7 @@ export default function About(props) {
       Our website includes basic functions such as word count, character count, and line count, which can help you to better understand the content and structure of your text. In addition, we have included a reading time count, which estimates how long it will take to read your text, making it easier to plan your presentations or speeches.
       </p>
       <p>
-      For formatting your text, {props.title} offers several options, including converting your text to uppercase, lowercase, or title case, as well as toggling or alternating the case of your text. You can also remove extra spaces or lines from your text, which can be especially useful when working with large documents.
+      For formatting your text, {props.title} offers several options, including converting your text to uppercase, lowercase, or title case, as well as toggling or alternating the case of your text. You can also remove extra spaces or lines from your text and with our replace feature, you can find and replace specific words or phrases within your text, which can be especially useful when working with large documents.
       </p>
       <p>
       {props.title} also includes convenient functions such as copying and clearing your text. With these features, you can easily transfer your text to other applications or start fresh with a new document.

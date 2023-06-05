@@ -35,6 +35,11 @@ pre {
   font-size: 16px;
 }
 
+ol li::marker {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
 /* Features */
 .custom-card-light {
   background-color: white;
