@@ -169,7 +169,7 @@ export default function TextForm(props) {
         <p>Certainly! Here's a step-by-step guide on how to use each feature on {props.heading}:</p>
         <ol>
           <li>
-            <h5>Word Count:</h5>
+            <h6>Word Count:</h6>
             <p>
               <ul style={{listStyle: 'disc'}}>
                 <li>Paste or type your text into the provided text box.</li>
@@ -179,7 +179,7 @@ export default function TextForm(props) {
           </li>
 
           <li>
-            <h5>Character Count:</h5>
+            <h6>Character Count:</h6>
             <p>
               <ul style={{listStyle: 'disc'}}>
                 <li>Enter your text in the designated text box.</li>
@@ -188,7 +188,7 @@ export default function TextForm(props) {
             </p>
           </li>
           <li>
-            <h5>Line Count:</h5>
+            <h6>Line Count:</h6>
             <p>
               <ul style={{listStyle: 'disc'}}>
                 <li>Copy and paste your text into the text box provided.</li>
@@ -197,7 +197,7 @@ export default function TextForm(props) {
             </p>
           </li>
           <li>
-            <h5>Reading Time Count:</h5>
+            <h6>Reading Time Count:</h6>
             <p>
               <ul style={{listStyle: 'disc'}}>
                 <li>Input or paste your text in the provided text box.</li>
@@ -206,7 +206,7 @@ export default function TextForm(props) {
             </p>
           </li>
           <li>
-            <h5>Uppercase:</h5>
+            <h6>Uppercase:</h6>
             <p>
               <ul style={{listStyle: 'disc'}}>
                 <li>Enter or paste your text into the text box.</li>
@@ -216,7 +216,7 @@ export default function TextForm(props) {
             </p>
           </li>
           <li>
-            <h5>Lowercase:</h5>
+            <h6>Lowercase:</h6>
             <p>
               <ul style={{listStyle: 'disc'}}>
                 <li>Paste or type your text into the provided text box.</li>
@@ -226,7 +226,7 @@ export default function TextForm(props) {
             </p>
           </li>
           <li>
-            <h5>Toggle Case:</h5>
+            <h6>Toggle Case:</h6>
             <p>
               <ul style={{listStyle: 'disc'}}>
                 <li>Enter your text in the designated text box.</li>
@@ -236,7 +236,7 @@ export default function TextForm(props) {
             </p>
           </li>
           <li>
-            <h5>Alternate Case:</h5>
+            <h6>Alternate Case:</h6>
             <p>
               <ul style={{listStyle: 'disc'}}>
                 <li>Paste or type your text into the provided text box.</li>
@@ -246,7 +246,7 @@ export default function TextForm(props) {
             </p>
           </li>
           <li>
-            <h5>Capitalize Text:</h5>
+            <h6>Capitalize Text:</h6>
             <p>
               <ul style={{listStyle: 'disc'}}>
                 <li>Enter your text in the designated text box.</li>
@@ -256,7 +256,7 @@ export default function TextForm(props) {
             </p>
           </li>
           <li>
-            <h5>Remove Extra Spaces:</h5>
+            <h6>Remove Extra Spaces:</h6>
             <p>
               <ul style={{listStyle: 'disc'}}>
                 <li>Paste or type your text into the provided text box.</li>
@@ -266,7 +266,7 @@ export default function TextForm(props) {
             </p>
           </li>
           <li>
-            <h5>Remove Extra Lines:</h5>
+            <h6>Remove Extra Lines:</h6>
             <p>
               <ul style={{listStyle: 'disc'}}>
                 <li>Enter your text in the designated text box.</li>
@@ -276,7 +276,7 @@ export default function TextForm(props) {
             </p>
           </li>
           <li>
-            <h5>Copy Text:</h5>
+            <h6>Copy Text:</h6>
             <p>
               <ul style={{listStyle: 'disc'}}>
                 <li>Input or paste your text into the text box.</li>
@@ -286,7 +286,7 @@ export default function TextForm(props) {
             </p>
           </li>
           <li>
-            <h5>Clear Text:</h5>
+            <h6>Clear Text:</h6>
             <p>
               <ul style={{listStyle: 'disc'}}>
                 <li>Paste or type your text into the provided text box.</li>
