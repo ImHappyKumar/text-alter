@@ -27,7 +27,7 @@ export default function Replace(props) {
         <input className={`form-control bg-${props.mode} shadow-none my-2 mx-0 py-1 px-2`} type="text" placeholder='Find' name='find' value={find} onChange={(e) => setFind(e.target.value)} style={{color: props.mode==='light'?'black':'white'}} />
         <input className={`form-control bg-${props.mode} shadow-none my-2 mx-0 py-1 px-2`} type="text" placeholder='Replace' name='replace' value={replace} onChange={(e) => setReplace(e.target.value)} style={{color: props.mode==='light'?'black':'white'}} />
         <p>{resultCount()?resultCount()+" results found":"No results"}</p>
-        <button disabled={find.length===0 || replace.length===0 || resultCount()===0} className="btn btn-sm btn-primary md-2" onClick={handleReplaceAll}>Replace All</button>
+        <button disabled={find.length===0 || resultCount()===0} className="btn btn-sm btn-primary md-2" onClick={handleReplaceAll}>Replace All</button>
     </div>
   )
 }
