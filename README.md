@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# TextAlter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Developed by Happy Kumar
 
-## Available Scripts
+Text Alter is a utility tool built using ReactJS that provides various text manipulation features, including word counting, character counting, line counting, reading time calculation, and text transformation options such as converting to uppercase or lowercase, toggling case, alternating case, capitalizing text, removing extra spaces or lines, copying text, and clearing text.
 
-In the project directory, you can run:
+## Features
+- **Word Counter:** Count the number of words in the provided text.
+- **Character Counter:** Count the number of characters in the provided text.
+- **Lines Counter:** Count the number of lines in the provided text.
+- **Reading Time Counter:** Estimate the reading time for the provided text.
+- **Text Transformation:** Manipulate text in various ways:
+  - Convert to Uppercase or Lowercase.
+  - Toggle Case: Switch the case of each character.
+  - Alternate Case: Make characters alternate between uppercase and lowercase.
+  - Capitalize Text: Capitalize the first letter of each word.
+  - Remove Extra Spaces or Lines: Clean up unnecessary spaces or lines.
+- **Copy Text:** Easily copy the manipulated text to the clipboard.
+- **Clear Text:** Clear the text area to start fresh.
 
-### `npm start`
+## Prerequisites
+Before you begin, ensure you have the following installed:
+- Node.js: https://nodejs.org/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
+1. Clone this repository to your local machine:
+    ```
+    git clone https://github.com/ImHappyKumar/TextAlter.git
+    ```
+2. Navigate to the project directory:
+    ```
+    cd TextAlter
+    ```
+3. Install dependencies:
+    ```
+    npm install
+    ```
+    
+## Usage
+1. Start the development server:
+    ```
+    npm start
+    ```
+2. Access the application in your browser at http://localhost:3000
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Contributing
+Contributions are welcome! If you encounter issues or have suggestions, please create an issue or submit a pull request.
+    
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
