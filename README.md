@@ -25,7 +25,7 @@ Before you begin, ensure you have the following installed:
 ## Installation
 1. Clone this repository to your local machine:
     ```
-    git clone https://github.com/ImHappyKumar/TextAlter.git
+    git clone https://github.com/ImHappyKumar/text-alter.git
     ```
 2. Navigate to the project directory:
     ```
